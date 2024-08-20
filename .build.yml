@@ -7,6 +7,7 @@ environment:
   site: shom.srht.site 
 tasks:
   - build: |
+      mv ./ox-hugo-nix ./$site
       cd $site
       #Only build and deploy main branch
       if [ "$(git rev-parse origin/main)" != "$(git rev-parse HEAD)" ]; then \

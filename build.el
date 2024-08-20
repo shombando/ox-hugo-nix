@@ -39,7 +39,7 @@
 
 ;; Export content from org to Hugo md
 (message "\n==== Exporting Hugo markdown ====")
-(with-current-buffer (find-file "./content.org")
+(with-current-buffer (find-file "./content-org/content.org")
   (org-hugo-export-wim-to-md :all-subtrees nil :visible-only nil))
 
 (message "\n==== Export complete ====")

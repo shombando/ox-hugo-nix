@@ -1,4 +1,4 @@
-baseURL = 'https://oxhugo-example.shom.dev'
+baseURL = 'https://shom.srht.site/'
 languageCode = 'en-us'
 # title = 'Ox-Hugo CI/CD Starter Site'
 theme = 'PaperMod'

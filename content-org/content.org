@@ -1,11 +1,12 @@
 #+hugo_base_dir: ../
 
 * Content
-** DONE CI/CD on Sourcehut with Nix
+** DONE CI/CD on Sourcehut with Nix                                :cicd:nix:
 CLOSED: [2024-08-19 Mon 22:56]
 :PROPERTIES:
 :EXPORT_FILE_NAME: ci-cd-on-sourcehut-with-Nix
 :END:
+Using Source Hut Pages with a Nix image (flake).
 
 ** DONE Ox-Hugo and site structure                               :hugo:emacs:
 CLOSED: [2024-08-19 Mon 23:30]

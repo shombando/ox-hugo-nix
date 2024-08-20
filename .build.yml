@@ -1,0 +1,23 @@
+image: nixos/unstable
+oauth: pages.sr.ht/PAGES:RW
+packages:
+  - hut
+sources:
+  - https://git.sr.ht/~shom/ox-hugo-nix
+environment:
+  NIX_CONFIG: "experimental-features = nix-command flakes"
+  site: shom.srht.site 
+tasks:
+  - build: |
+      cd $site
+      #Only build and deploy main branch
+      if [ "$(git rev-parse origin/main)" != "$(git rev-parse HEAD)" ]; then \
+      complete-build; \
+      fi
+      nix develop --command ./build.sh --gc
+  - package: |
+      cd $site
+      cd public
+      tar -cvz . > ../site.tar.gz
+  - upload: |
+      hut pages publish -d $site site.tar.gz

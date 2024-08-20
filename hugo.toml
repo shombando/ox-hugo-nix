@@ -1,0 +1,36 @@
+baseURL = 'https://oxhugo-example.shom.dev'
+languageCode = 'en-us'
+# title = 'Ox-Hugo CI/CD Starter Site'
+theme = 'PaperMod'
+
+# Ox-Hugo specific
+[markup.goldmark.renderer]
+  unsafe = true
+
+# Theme specific
+[params]
+UseHugoToc = true
+showtoc = true
+tocopen = false
+ShowReadingTime = true
+
+[params.homeInfoParams]
+Title = "Emacs + Org Mode + Ox-Hugo = ❤️"
+Content = "Ox-Hugo CI/CD Starter Site"
+
+[[params.socialIcons]]
+name = "other"
+url = "https://shom.dev"
+
+[[params.socialIcons]]
+name = "mastodon"
+url = "https://phanpy.social/#/fosstodon.org/a/243697"
+
+
+[[params.buttons]]
+name = "posts"
+url = "/posts"
+
+[[params.buttons]]
+name = "tags"
+url = "/tags"

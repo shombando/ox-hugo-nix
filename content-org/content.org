@@ -1,0 +1,53 @@
+#+hugo_base_dir: ../
+
+* Content
+** DONE CI/CD on Sourcehut with Nix
+CLOSED: [2024-08-19 Mon 22:56]
+:PROPERTIES:
+:EXPORT_FILE_NAME: ci-cd-on-sourcehut-with-Nix
+:END:
+
+** DONE Ox-Hugo and site structure                               :hugo:emacs:
+CLOSED: [2024-08-19 Mon 23:30]
+:PROPERTIES:
+:EXPORT_FILE_NAME: index
+:EXPORT_HUGO_BUNDLE: emacs-orgmode-oxhugo-❤️
+:END:
+
+This is an example site meant as a starter pack for using Ox-Hugo to host a site.
+
+*** Install
+Install Ox-Hugo and Hugo locally alongside Emacs with Orgmode.
+
+*** Theme
+Theme is added a git submodule. Pick a theme you like and add it as a submodule and put the corresponding name in the =hugo.toml= file. For this site, the theme is PaperMod: ~git submodule add https://github.com/adityatelange/hugo-PaperMod themes/PaperMod~
+
+*** Structure
+To add content to the site on the ~content.org~: 
+- Add all posts to the Posts node of this file.
+- The sections of the site are also defined as nodes.
+- New sections can be added as new nodes in the same structure as Posts.
+
+*** Running locally
+Export using =C-c C-e H A= and run hugo with =hugo server --buildDrafts --navigateToChanged --disableFastRender=
+
+* Home
+:PROPERTIES:
+:EXPORT_HUGO_SECTION:
+:EXPORT_FILE_NAME: _index
+:EXPORT_HUGO_MENU: :menu "main" :weight -3 :title Home
+:END:
+
+* Tags
+:PROPERTIES:
+:EXPORT_HUGO_SECTION: tags
+:EXPORT_HUGO_MENU: :menu "main" :weight -2 :title Tags
+:EXPORT_FILE_NAME: _index
+:END:
+
+* Posts
+:PROPERTIES:
+:EXPORT_HUGO_SECTION: posts
+:EXPORT_FILE_NAME: _index
+:EXPORT_HUGO_MENU: :menu "main" :weight -1 :title Posts
+:END:

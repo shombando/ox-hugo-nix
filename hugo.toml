@@ -16,7 +16,7 @@ ShowReadingTime = true
 
 [params.homeInfoParams]
 Title = "Emacs + Org Mode + Ox-Hugo = ❤️"
-Content = "Ox-Hugo CI/CD Starter Site"
+Content = "Ox-Hugo CI/CD Starter Site. Site built from: https://git.sr.ht/~shom/ox-hugo-nix"
 
 [[params.socialIcons]]
 name = "other"

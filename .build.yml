@@ -1,7 +1,5 @@
 image: nixos/unstable
 oauth: pages.sr.ht/PAGES:RW
-packages:
-  - hut
 sources:
   - https://git.sr.ht/~shom/ox-hugo-nix
 environment:
@@ -20,4 +18,4 @@ tasks:
       cd public
       tar -cvz . > ../site.tar.gz
   - upload: |
-      hut pages publish -d $site site.tar.gz
+      acurl -f https://pages.sr.ht/publish/$site -Fcontent=@site.tar.gz

@@ -25,12 +25,3 @@ url = "https://shom.dev"
 [[params.socialIcons]]
 name = "mastodon"
 url = "https://phanpy.social/#/fosstodon.org/a/243697"
-
-
-[[params.buttons]]
-name = "posts"
-url = "/posts"
-
-[[params.buttons]]
-name = "tags"
-url = "/tags"

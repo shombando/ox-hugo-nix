@@ -1,6 +1,6 @@
 baseURL = 'https://shom.srht.site/'
 languageCode = 'en-us'
-# title = 'Ox-Hugo CI/CD Starter Site'
+title = 'Starter Site'
 theme = 'PaperMod'
 
 # Ox-Hugo specific
@@ -27,5 +27,5 @@ name = "mastodon"
 url = "https://phanpy.social/#/fosstodon.org/a/243697"
 
 [[params.socialIcons]]
-name = "mastodon"
+name = "rss"
 url = "./index.xml"

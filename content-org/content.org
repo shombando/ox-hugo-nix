@@ -1,15 +1,27 @@
 #+hugo_base_dir: ../
 
 * Content
-** DONE CI/CD on Sourcehut with Nix                                :cicd:nix:
-CLOSED: [2024-08-19 Mon 22:56]
+** DONE Automated build locally with Podman                      :podman:nix:
+CLOSED: [2024-08-25 Sun 18:49]
+:PROPERTIES:
+:EXPORT_FILE_NAME: automated-build-locally-with-podman
+:END:
+The same infrastructure with Nix can be used to build the site locally using Podman to run a Nix container and use a single command to trigger a reproducible build. Now the build sequence is a little long but it is modular: =./container/nix-container.sh= → =./container/nix-develop.sh= → =build.sh= → =build.el= → =hugo=.
+
+Note: currently the Nix image doesn't cache the derivations for the added packages from =flake.nix=: =hugo= and =emacs29-nox=. I'll be looking into an "easy" caching solution. 
+
+** DONE CI/CD on Sourcehut with Nix                           :nix:sourcehut:
+CLOSED: [2024-08-25 Sun 19:01]
 :PROPERTIES:
 :EXPORT_FILE_NAME: ci-cd-on-sourcehut-with-Nix
 :END:
 Using Source Hut Pages with a Nix image (flake).
+The ~.build.yml~ file in the root folder is specific to [[https://srht.site/][Sourcehut Pages]].
 
-** DONE Ox-Hugo and site structure                               :hugo:emacs:
-CLOSED: [2024-08-19 Mon 23:30]
+Note: To host using Sourcehut Pages the name of the site has to be YOUR-USER-NAME.srht.site unless you use a custom domain. My main site [[https://shom.dev][shom.dev]] uses a very similar setup with a custom domain.
+
+** DONE Ox-Hugo and site structure                             :oxhugo:emacs:
+CLOSED: [2024-08-25 Sun 19:02]
 :PROPERTIES:
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: emacs-orgmode-oxhugo-❤️
@@ -30,7 +42,7 @@ To add content to the site on the ~content.org~:
 - New sections can be added as new nodes in the same structure as Posts.
 
 *** Running locally
-Export using =C-c C-e H A= and run hugo with =hugo server --buildDrafts --navigateToChanged --disableFastRender=
+To manually export the org document to md and server it locally with Hugo: export using =C-c C-e H A= and run hugo with =hugo server --buildDrafts --navigateToChanged --disableFastRender=
 
 * Home
 :PROPERTIES:

@@ -1,7 +1,7 @@
 #+hugo_base_dir: ../
 
 * Content
-** DONE Automated build locally with Podman                      :podman:nix:
+** DONE Automated build locally with Podman            :podman:nix:sourcehut:
 CLOSED: [2024-08-25 Sun 18:49]
 :PROPERTIES:
 :EXPORT_FILE_NAME: automated-build-locally-with-podman
@@ -13,24 +13,30 @@ Note: currently the Nix image doesn't cache the derivations for the added packag
 ** DONE CI/CD on Sourcehut with Nix                           :nix:sourcehut:
 CLOSED: [2024-08-25 Sun 19:01]
 :PROPERTIES:
-:EXPORT_FILE_NAME: ci-cd-on-sourcehut-with-Nix
+:EXPORT_FILE_NAME: ci-cd-on-sourcehut-with-nix
 :END:
 Using Source Hut Pages with a Nix image (flake).
 The ~.build.yml~ file in the root folder is specific to [[https://srht.site/][Sourcehut Pages]].
 
-Note: To host using Sourcehut Pages the name of the site has to be YOUR-USER-NAME.srht.site unless you use a custom domain. My main site [[https://shom.dev][shom.dev]] uses a very similar setup with a custom domain.
+Please update the =sources= section to match your repo name and update =site= to your site's URL. To host using Sourcehut Pages the name of the site has to be YOUR-USER-NAME.srht.site unless you use a custom domain.
 
-** DONE Ox-Hugo and site structure                             :oxhugo:emacs:
+** DONE Quick Start                                            :oxhugo:emacs:
 CLOSED: [2024-08-25 Sun 19:02]
 :PROPERTIES:
 :EXPORT_FILE_NAME: index
-:EXPORT_HUGO_BUNDLE: emacs-orgmode-oxhugo-❤️
+:EXPORT_HUGO_BUNDLE: quick-start
 :END:
 
 This is an example site meant as a starter pack for using Ox-Hugo to host a site.
 
 *** Install
+**** Local
 Install Ox-Hugo and Hugo locally alongside Emacs with Orgmode.
+**** Container
+A local install of hugo and ox-hugo are not required if you're going to use a [[../automated-build-locally-with-podman][container based workflow]].
+
+*** Clone
+Clone this repo and update =hugo.toml= to match your information.
 
 *** Theme
 Theme is added a git submodule. Pick a theme you like and add it as a submodule and put the corresponding name in the =hugo.toml= file. For this site, the theme is PaperMod: ~git submodule add https://github.com/adityatelange/hugo-PaperMod themes/PaperMod~
@@ -42,8 +48,11 @@ To add content to the site on the ~content.org~:
 - New sections can be added as new nodes in the same structure as Posts.
 
 *** Running locally
-To manually export the org document to md and server it locally with Hugo: export using =C-c C-e H A= and run hugo with =hugo server --buildDrafts --navigateToChanged --disableFastRender=
+To manually export the org document to md and server it locally with Hugo: export using =C-c C-e H A= and run hugo with =hugo server --buildDrafts --navigateToChanged --disableFastRender=. You can leave the hugo server running and see your changes on each export or [[https://ox-hugo.scripter.co/doc/auto-export-on-saving/][auto-export on save.]]
+This is a good way to verify everything is rendering as you intend, but is not a required step.
 
+*** Publish
+If you're using [[../ci-cd-on-sourcehut-with-nix][Sourcehut Pages]], update =.build.yml= and push to your Sourcehut repo.
 * Home
 :PROPERTIES:
 :EXPORT_HUGO_SECTION:

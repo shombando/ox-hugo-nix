@@ -36,7 +36,7 @@ Install Ox-Hugo and Hugo locally alongside Emacs with Orgmode.
 A local install of hugo and ox-hugo are not required if you're going to use a [[../automated-build-locally-with-podman][container based workflow]].
 
 *** Clone
-Clone this repo and update =hugo.toml= to match your information.
+[[https://git.sr.ht/~shom/ox-hugo-nix][Clone this repo]] and update =hugo.toml= to match your information.
 
 *** Theme
 Theme is added a git submodule. Pick a theme you like and add it as a submodule and put the corresponding name in the =hugo.toml= file. For this site, the theme is PaperMod: ~git submodule add https://github.com/adityatelange/hugo-PaperMod themes/PaperMod~

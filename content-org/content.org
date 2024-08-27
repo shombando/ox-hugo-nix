@@ -1,12 +1,15 @@
 #+hugo_base_dir: ../
 
 * Content
-** DONE Automated build locally with Podman            :podman:nix:sourcehut:
-CLOSED: [2024-08-25 Sun 18:49]
+** DONE Automated local builds with Podman                       :podman:nix:
+CLOSED: [2024-08-26 Mon 21:42]
 :PROPERTIES:
-:EXPORT_FILE_NAME: automated-build-locally-with-podman
+:EXPORT_FILE_NAME: automated-local-builds-with-podman
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :aliases /posts/automated-build-locally-with-podman :weight 3
 :END:
-The same infrastructure with Nix can be used to build the site locally using Podman to run a Nix container and use a single command to trigger a reproducible build. Now the build sequence is a little long but it is modular: =./container/nix-container.sh= → =./container/nix-develop.sh= → =build.sh= → =build.el= → =hugo=.
+The same infrastructure with Nix can be used to build the site locally using Podman to run a Nix container and use a single command to trigger a reproducible build. This requires local installation of Podman and pulling the guix container before running =./container/nix-container.sh=.
+
+Now the build sequence is a little longer but it is modular: =./container/nix-container.sh= → =./container/nix-develop.sh= → =build.sh= → =build.el= → =MD= → =hugo= → =HTML=.
 
 Note: currently the Nix image doesn't cache the derivations for the added packages from =flake.nix=: =hugo= and =emacs29-nox=. I'll be looking into an "easy" caching solution. 
 
@@ -14,6 +17,7 @@ Note: currently the Nix image doesn't cache the derivations for the added packag
 CLOSED: [2024-08-25 Sun 19:01]
 :PROPERTIES:
 :EXPORT_FILE_NAME: ci-cd-on-sourcehut-with-nix
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :weight 2
 :END:
 Using Source Hut Pages with a Nix image (flake).
 The ~.build.yml~ file in the root folder is specific to [[https://srht.site/][Sourcehut Pages]].
@@ -21,13 +25,14 @@ The ~.build.yml~ file in the root folder is specific to [[https://srht.site/][So
 Please update the =sources= section to match your repo name and update =site= to your site's URL. To host using Sourcehut Pages the name of the site has to be YOUR-USER-NAME.srht.site unless you use a custom domain.
 
 ** DONE Quick Start                                            :oxhugo:emacs:
-CLOSED: [2024-08-25 Sun 19:02]
+CLOSED: [2024-08-26 Mon 20:46]
 :PROPERTIES:
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: quick-start
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :weight 1
 :END:
 
-This is an example site meant as a starter pack for using Ox-Hugo to host a site.
+This is an example site meant as a starter pack for using Ox-Hugo to host a site. If you would like any help or have any comments, [[https://phanpy.social/#/fosstodon.org/s/113025979545599233?view=full][join the conversation on the Fediverse (Mastodon)]].
 
 *** Install
 **** Local

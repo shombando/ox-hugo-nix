@@ -16,7 +16,7 @@ ShowReadingTime = true
 
 [params.homeInfoParams]
 Title = "Emacs + Org Mode + Ox-Hugo = ❤️"
-Content = "Ox-Hugo CI/CD Starter Site. Site built from: https://git.sr.ht/~shom/ox-hugo-nix"
+Content = "Ox-Hugo CI/CD Starter Site. Site built from: https://https://codeberg.org/shom/ox-hugo-nix"
 
 [[params.socialIcons]]
 name = "other"
@@ -24,7 +24,7 @@ url = "https://shom.dev"
 
 [[params.socialIcons]]
 name = "mastodon"
-url = "https://phanpy.social/#/fosstodon.org/a/243697"
+url = "https://gts.shom.dev/@shom"
 
 [[params.socialIcons]]
 name = "rss"

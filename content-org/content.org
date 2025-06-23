@@ -32,7 +32,7 @@ CLOSED: [2024-08-26 Mon 20:46]
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :weight 1
 :END:
 
-This is an example site meant as a starter pack for using Ox-Hugo to host a site. If you would like any help or have any comments, [[https://phanpy.social/#/fosstodon.org/s/113025979545599233?view=full][join the conversation on the Fediverse (Mastodon)]].
+This is an example site meant as a starter pack for using Ox-Hugo to host a site. If you would like any help or have any comments, [[https://gts.shom.dev/@shom][join the conversation on the Fediverse]].
 
 *** Install
 **** Local
@@ -53,11 +53,11 @@ To add content to the site on the ~content.org~:
 - New sections can be added as new nodes in the same structure as Posts.
 
 *** Running locally
-To manually export the org document to md and server it locally with Hugo: export using =C-c C-e H A= and run hugo with =hugo server --buildDrafts --navigateToChanged --disableFastRender=. You can leave the hugo server running and see your changes on each export or [[https://ox-hugo.scripter.co/doc/auto-export-on-saving/][auto-export on save.]]
+To manually export the org document to md and server it locally with Hugo: export using =C-c C-e H A= and run hugo with =hugo server --buildDrafts --navigateToChanged --disableFastRender=. You can leave the hugo server running and see your changes on each export or [[https://ox-hugo.scripter.co/doc/auto-export-on-saving/][auto-export on save]].
 This is a good way to verify everything is rendering as you intend, but is not a required step.
 
 *** Publish
-If you're using [[../ci-cd-on-sourcehut-with-nix][Sourcehut Pages]], update =.build.yml= and push to your Sourcehut repo.
+If you're using [[../ci-cd-on-sourcehut-with-nix][Sourcehut Pages]], update =.build.yml= and push to your Sourcehut repo. Or add build files for Codeberg or Github.
 * Home
 :PROPERTIES:
 :EXPORT_HUGO_SECTION:
